@@ -1,0 +1,61 @@
+URxvt*depth: 32
+URxvt*background:       #0f0f0f
+URxvt*background: rgba:0000/0000/0200/c800
+URxvt*font: xft:Droid Sans Mono for Powerline:size=10
+URxvt*boldFont: xft:Monospace:size=11:bold
+URxvt*termName:         rxvt
+URxvt*foreground:       #dedede
+URxvt*scrollBar:        false
+URxvt*matcher.button:   1
+URxvt.transparent:    false
+URxvt*allow_bold:    true
+URxvt*urlLauncher: chromium
+Xft*dpi:                96
+Xft*antialias:          true
+Xft*hinting:            full
+
+URxvt*geometry: 85x11
+URxvt*fading:        0
+URxvt*tintColor:     #ffffff
+URxvt*shading:        0
+URxvt*inheritPixmap:     Fckground:   #0f0f0f
+
+! special
+*.foreground:   #dedede
+*.background:   #0f0f0f
+*.cursorColor:  #dedede
+
+! black
+*.color0:       #39474a
+*.color8:       #4c5f63
+
+! red
+*.color1:       #d6341f
+*.color9:       #e34e3b
+
+! green
+*.color2:       #b85a11
+*.color10:      #de7c31
+
+! yellow
+*.color3:       #bc5b44
+*.color11:      #d2725b
+
+! blue
+*.color4:       #2e43df
+*.color12:      #6676ed
+
+! magenta
+*.color5:       #b9924a
+*.color13:      #d69d55
+
+! cyan
+*.color6:       #3c8696
+*.color14:      #5eb1c2
+
+! white
+*.color7:       #ccb7a7
+*.color15:      #efd7c4
+
+! Rofi Config
+

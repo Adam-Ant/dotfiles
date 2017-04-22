@@ -1,0 +1,35 @@
+##General QOL
+alias la='ls -lah --color=auto'
+alias ls='ls -h --color=auto'
+
+eval "$(thefuck --alias)"
+dme (){ eval $(docker-machine env "$@");}
+alias dmssh='docker-machine ssh'
+alias dm='docker-machine'
+
+alias dps='docker ps'
+alias dpsa='docker ps -a'
+alias drm='docker rm'
+alias drmi='docker rmi'
+alias dim='docker images'
+alias dbl='docker build'
+alias dbl.='docker build .'
+alias drun='docker run -ti'
+alias dkl='docker kill'
+alias dalpine='docker run -ti --rm alpine:3.5 /bin/sh'
+alias drm-stopped='docker rm -v $(docker ps -a -q -f status=exited)'
+alias drmi-untag='docker rmi $(docker images -f "dangling=true" -q)'
+dsh() {
+    docker exec -ti $1 /bin/sh
+}
+
+alias pacup='pacaur -Syu'
+alias pacrm='pacaur -Rs'
+alias pacadd='pacaur -S'
+
+alias shred='shred -uzn 5'
+
+#VirtualEnv
+export WORKON_HOME=$HOME/.virtualenvs   # optional
+export PROJECT_HOME=$HOME/Sync/Programming/Python      # optional
+source /usr/bin/virtualenvwrapper.sh
