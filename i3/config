@@ -62,7 +62,6 @@ floating_modifier $mod
 
 #Assign certain programs to certain workspaces
 assign [instance="ts3client_linux_amd64"] $ws9
-assign [class="chromium"] $ws3
 assign [instance="music" class="URxvt"] $ws10
 
 # start a terminal
@@ -85,7 +84,7 @@ bindsym --release $mod+p exec gist -cpPR
 bindsym --release $mod+l exec ~/.config/i3/lock.sh
 
 #Chromium
-bindsym --release $mod+c exec chromium
+bindsym --release $mod+c exec firefox
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
