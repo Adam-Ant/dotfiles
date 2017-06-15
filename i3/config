@@ -51,7 +51,7 @@ font pango:monospace 8
 
 # Background Tasks
 exec --no-startup-id compton -CG --config ~/.config/compton.conf
-exec --no-startup-id feh --bg-scale 'Pictures/1920x1080.png' --bg-scale 'Pictures/2560x1080.png' --bg-scale 'Pictures/1920x1080.png'
+exec --no-startup-id feh --bg-scale 'Pictures/1920x1080.png' --bg-scale 'Pictures/1920x1080.png' --bg-scale 'Pictures/2560x1080.png' 
 
 # Set up the workspaces
 exec --no-startup-id sleep 5 && teamspeak3
