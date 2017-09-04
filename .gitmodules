@@ -10,3 +10,9 @@
 [submodule "vim/bundle/vim-gitgutter"]
 	path = vim/bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter
+[submodule "vim/bundle/vim-markdown-preview"]
+	path = vim/bundle/vim-markdown-preview
+	url = https://github.com/JamshedVesuna/vim-markdown-preview.git
+[submodule "vim/bundle/vim-markdown-toc"]
+	path = vim/bundle/vim-markdown-toc
+	url = git@github.com:mzlogin/vim-markdown-toc.git
