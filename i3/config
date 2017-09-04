@@ -36,12 +36,12 @@ set $bg-urgent 		#5EB1C2
 set $dark-text 		#0F0F0F
 set $light-text 	#DEDEDE
 
-# Name			Border		Background	Text		Indicator
-client.focused		$bg-active	$bg-active	$dark-text	$bg-active
-client.unfocused	$bg-inactive	$bg-inactive	$light-text	$bg-inactive
+# Name			            Border		    Background	  Text		    Indicator
+client.focused		      $bg-active	  $bg-active	  $dark-text	$bg-active
+client.unfocused	      $bg-inactive	$bg-inactive	$light-text	$bg-inactive
 client.focused_inactive	$bg-inactive	$bg-inactive	$light-text	$bg-inactive
-client.urgent		$bg-urgent	$bg-urgent	$dark-text	$bg-urgent
-client.placeholder	#000000 	#0C0C0C 	#FFFFFF
+client.urgent		        $bg-urgent	  $bg-urgent	  $dark-text	$bg-urgent
+client.placeholder	    #000000 	    #0C0C0C 	    #FFFFFF
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -51,7 +51,8 @@ font pango:monospace 8
 
 # Background Tasks
 exec --no-startup-id compton -CG --config ~/.config/compton.conf
-exec --no-startup-id feh --bg-scale 'Pictures/1920x1080.png' --bg-scale 'Pictures/1920x1080.png' --bg-scale 'Pictures/2560x1080.png' 
+#exec --no-startup-id feh --bg-scale 'Pictures/1920x1080.png' --bg-scale 'Pictures/1920x1080.png' --bg-scale 'Pictures/2560x1080.png' 
+exec --no-startup-id ~/.dotfiles/i3/background.sh
 
 # Set up the workspaces
 exec --no-startup-id sleep 5 && teamspeak3
