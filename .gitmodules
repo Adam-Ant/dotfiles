@@ -16,3 +16,6 @@
 [submodule "vim/bundle/vim-markdown-toc"]
 	path = vim/bundle/vim-markdown-toc
 	url = git@github.com:mzlogin/vim-markdown-toc.git
+[submodule "vim/bundle/vim-better-whitespace"]
+	path = vim/bundle/vim-better-whitespace
+	url = git@github.com:ntpeters/vim-better-whitespace.git
