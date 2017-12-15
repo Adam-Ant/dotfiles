@@ -40,3 +40,6 @@ source /usr/bin/virtualenvwrapper.sh
 
 #Ruby. Yay...
 export PATH="$PATH:$(ruby -rubygems -e 'puts Gem.user_dir')/bin"
+
+# Go
+export GOPATH="/home/adam/Sync/Go"
