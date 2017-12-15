@@ -1,11 +1,21 @@
 ##General QOL
-alias la='ls -lah --color=auto'
-alias ls='ls -h --color=auto'
+alias la='ls -lAh'
+alias ll='ls -lh'
 
+alias -g ...=../..
+alias -g ....=../../..
+alias -g .....=../../../..
+alias -g ......=../../../../..
+
+# Setup Fuck
 eval "$(thefuck --alias)"
+
+# Docker Aliases
 dme (){ eval $(docker-machine env "$@");}
 alias dmssh='docker-machine ssh'
 alias dm='docker-machine'
+
+alias dc='docker-compose'
 
 alias dps='docker ps'
 alias dpsa='docker ps -a'
@@ -16,26 +26,33 @@ alias dbl='docker build'
 alias dbl.='docker build .'
 alias drun='docker run -ti'
 alias dkl='docker kill'
-alias dalpine='docker run -ti --rm alpine:3.6 /bin/sh'
+alias dalpine='docker run -ti --rm alpine /bin/sh'
 alias drm-stopped='docker rm -v $(docker ps -a -q -f status=exited)'
 alias drmi-untag='docker rmi $(docker images -f "dangling=true" -q)'
 dsh() {
     docker exec -ti $1 /bin/sh
 }
 
+# Package management
 alias pacup='pacaur -Syu'
 alias pacrm='pacaur -Rs'
 alias pacadd='pacaur -S'
 
+# Command Overrides
 alias shred='shred -uzn 5'
+alias cp='cp -r'
+alias dd='dd status=progress'
+alias ls='ls -F --color=always'
+alias pacman='pacman --color=always'
+alias pacaur='pacaur --color=always'
+which gopass &>/dev/null && alias pass='gopass' && source <(gopass completion zsh) #Only override pass if gopass exists
 
 # Beets remote music management
 alias beet="eval $(docker-machine env DockerOther | sed -n 's/export\s*//gp' | xargs ) docker exec -ti beets beet"
 alias beet-restart="eval $(docker-machine env DockerOther | sed -n 's/export\s*//gp' | xargs ) docker restart beets"
 
-# If Gopass exists, use it instead of Pass
-which gopass &>/dev/null && alias pass='gopass'
-source <(gopass completion zsh)
+# Put the SSH Ident bin in if its deps are installed.
+which python &>/dev/null && export PATH="$HOME/.dotfiles/ssh-ident:$PATH" && alias rsync='BINARY_SSH=rsync ~/.dotfiles/ssh-ident/ssh-ident'
 
 #VirtualEnv
 export WORKON_HOME=$HOME/.virtualenvs   # optional
