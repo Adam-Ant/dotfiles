@@ -8,7 +8,7 @@ case $option in
     'Power Off') systemctl poweroff;;
     Restart) systemctl reboot;;
     Windows)
-        windows=`efibootmgr | grep -Po -m1 'Boot\K(\d{4}).*Windows.*' | head -c4`
+        windows=`efibootmgr | grep -Po -m1 'Boot\K(\w{4}).*Windows.*' | head -c4`
         `sudo efibootmgr -n $windows`
         reboot;;
 esac
