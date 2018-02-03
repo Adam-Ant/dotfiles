@@ -75,8 +75,8 @@ bindsym $mod+q kill
 bindsym $mod+d exec --no-startup-id rofi -show run
 
 #Screenshots!
-bindsym --release Print exec imgur-screenshot -s
-bindsym --release $mod+Print exec imgur-screenshot -f
+bindsym --release Print exec scrot -s ~/Screenshots/%y%m%d-%H%M%S.png -e '~/.dotfiles/i3/screenshot.sh $f'
+bindsym --release $mod+Print exec scrot ~/Screenshots/%y%m%d-%H%M%S.png -e '~/.dotfiles/i3    /screenshot.sh $f'
 
 #Gist the clipboard:
 bindsym --release $mod+p exec gist -cpPR
