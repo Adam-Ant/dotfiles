@@ -62,7 +62,7 @@ SSH_DEFAULT_OPTIONS = "-oUseRoaming=no"
 # Which options to use by default if no match with SSH_ADD_OPTIONS
 # was found. Note that ssh-ident hard codes -t 7200 to prevent your
 # keys from remaining in memory for too long.
-SSH_ADD_DEFAULT_OPTIONS = "-t 900"
+SSH_ADD_DEFAULT_OPTIONS = "-t 1800"
 
 # Output verbosity
 # valid values are: LOG_ERROR, LOG_WARN, LOG_INFO, LOG_DEBUG

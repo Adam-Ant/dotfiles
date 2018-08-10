@@ -1,4 +1,21 @@
-execute pathogen#infect()
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'airblade/vim-gitgutter'
+Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'chr4/nginx.vim'
+
+call plug#end()
+
 syntax on
 
 " Spaces are better than tabs :P
@@ -16,7 +33,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='murmur'
 
 " markdown-preview
-let vim_markdown_preview_toggle=1
+let vim_markdown_preview_toggle=0
 let vim_markdown_preview_browser='Firefox'
 let vim_markdown_preview_use_xdg_open=1
 let vim_markdown_preview_github=1

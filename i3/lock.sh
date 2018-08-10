@@ -15,7 +15,7 @@ R=$(file $icon | grep -o '[0-9]* x [0-9]*')
 RX=$(echo $R | cut -d' ' -f 1)
 RY=$(echo $R | cut -d' ' -f 3)
 
-RES=$(xrandr --query | grep 'HDMI-0' | cut -f4 -d' ')
+RES=$(xrandr --query | grep 'DP-1' | cut -f4 -d' ')
 
 # monitor position/offset
 SRX=$(echo $RES | cut -d'x' -f 1)                   # x pos
